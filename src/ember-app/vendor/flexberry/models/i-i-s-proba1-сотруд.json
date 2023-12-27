@@ -1,0 +1,44 @@
+﻿{
+  "name": "IISProba1Сотруд",
+  "modelName": "i-i-s-proba1-сотруд",
+  "className": "Сотруд",
+  "nameSpace": "IIS.Proba1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "тЧСотруд",
+      "relatedTo": "i-i-s-proba1-т-ч-сотруд",
+      "inverse": "сотруд"
+    }
+  ],
+  "projections": [
+    {
+      "name": "СотрудE",
+      "modelName": "i-i-s-proba1-сотруд",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ТЧСотрудE",
+          "caption": "Т ч сотруд",
+          "name": "тЧСотруд",
+          "relatedTo": "i-i-s-proba1-т-ч-сотруд",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "СотрудL",
+      "modelName": "i-i-s-proba1-сотруд",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

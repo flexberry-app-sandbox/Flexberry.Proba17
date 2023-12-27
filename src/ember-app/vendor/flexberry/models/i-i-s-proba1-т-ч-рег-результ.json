@@ -1,0 +1,100 @@
+﻿{
+  "name": "IISProba1ТЧРегРезульт",
+  "modelName": "i-i-s-proba1-т-ч-рег-результ",
+  "className": "ТЧРегРезульт",
+  "nameSpace": "IIS.Proba1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "итогСобесед",
+      "type": "i-i-s-proba1-итог-собесед",
+      "flexberryType": "ИтогСобесед",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "крКомИлиОбсРеш",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "оценкаКандид",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотруд",
+      "relatedTo": "i-i-s-proba1-сотруд",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "регРезульт",
+      "relatedTo": "i-i-s-proba1-рег-результ",
+      "inverse": "тЧРегРезульт"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧРегРезультE",
+      "modelName": "i-i-s-proba1-т-ч-рег-результ",
+      "attrs": [
+        {
+          "name": "итогСобесед",
+          "caption": "Итог собесед",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "оценкаКандид",
+          "caption": "Оценка кандид",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "крКомИлиОбсРеш",
+          "caption": "Кр ком или обс реш",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотруд",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
+          "caption": "Сотруд",
+          "name": "сотруд",
+          "relatedTo": "i-i-s-proba1-сотруд",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

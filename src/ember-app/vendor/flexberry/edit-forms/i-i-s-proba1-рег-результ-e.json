@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ПланирСобес",
+      "projection": "ПланирСобесL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Организация",
+      "projection": "ОрганизацияL",
+      "detailModelName": null
+    },
+    {
+      "master": "сотруд",
+      "displayAttributeName": null,
+      "required": true,
+      "relationName": "ТЧРегРезульт.Сотруд",
+      "projection": "СотрудL",
+      "detailModelName": "i-i-s-proba1-т-ч-рег-результ"
+    }
+  ],
+  "external": false,
+  "caption": "Рег результ",
+  "name": "IISProba1РегРезультE",
+  "className": "РегРезультE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-proba1-рег-результ",
+      "modelProjection": "РегРезультE"
+    }
+  ]
+}
